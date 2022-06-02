@@ -67,11 +67,11 @@ Try {
 	## Variables: Application
 	[string]$appVendor = 'Sphero, Inc.'
 	[string]$appName = 'Sphero Edu'
-	[string]$appVersion = '1.0.0'
+	[string]$appVersion = '6.3.7.0'
 	[string]$appArch = 'x64'
 	[string]$appLang = 'EN'
 	[string]$appRevision = '01'
-	[string]$appScriptVersion = '1.0.0'
+	[string]$appScriptVersion = '1.0.2'
 	[string]$appScriptDate = '06/02/2022'
 	[string]$appScriptAuthor = 'Craig Myers'
 	##*===============================================
@@ -267,8 +267,8 @@ Catch {
 # SIG # Begin signature block
 # MIIU9wYJKoZIhvcNAQcCoIIU6DCCFOQCAQExCzAJBgUrDgMCGgUAMGkGCisGAQQB
 # gjcCAQSgWzBZMDQGCisGAQQBgjcCAR4wJgIDAQAABBAfzDtgWUsITrck0sYpfvNR
-# AgEAAgEAAgEAAgEAAgEAMCEwCQYFKw4DAhoFAAQUehKYxhfkNK2sF9NdoMd7Azaq
-# GAugghHXMIIFbzCCBFegAwIBAgIQSPyTtGBVlI02p8mKidaUFjANBgkqhkiG9w0B
+# AgEAAgEAAgEAAgEAAgEAMCEwCQYFKw4DAhoFAAQUyBurEoKKBMIUxd+zNItCQ0FT
+# smqgghHXMIIFbzCCBFegAwIBAgIQSPyTtGBVlI02p8mKidaUFjANBgkqhkiG9w0B
 # AQwFADB7MQswCQYDVQQGEwJHQjEbMBkGA1UECAwSR3JlYXRlciBNYW5jaGVzdGVy
 # MRAwDgYDVQQHDAdTYWxmb3JkMRowGAYDVQQKDBFDb21vZG8gQ0EgTGltaXRlZDEh
 # MB8GA1UEAwwYQUFBIENlcnRpZmljYXRlIFNlcnZpY2VzMB4XDTIxMDUyNTAwMDAw
@@ -368,13 +368,13 @@ Catch {
 # ZSBTaWduaW5nIENBIFIzNgIRAKVN33D73PFMVIK48rFyyjEwCQYFKw4DAhoFAKB4
 # MBgGCisGAQQBgjcCAQwxCjAIoAKAAKECgAAwGQYJKoZIhvcNAQkDMQwGCisGAQQB
 # gjcCAQQwHAYKKwYBBAGCNwIBCzEOMAwGCisGAQQBgjcCARUwIwYJKoZIhvcNAQkE
-# MRYEFAD8aEBLa0gcNEWL0P/eOpiE0/9OMA0GCSqGSIb3DQEBAQUABIIBgDTRdZy+
-# rNp6g4K39GZPIlalGZiu/afsN6Z6Zm06bjRaqpVfLvlwosVdr3P3fikq+35DasoH
-# pVyAJaMpxgx5ORORml7P8J+YzWGsm+SIWwQ8FlW94ahPVjzUHB4p+Tb0aQSa7xp0
-# JO+sj81z2KQurvdqtp6yd5tXvtDwyfifxb/u6hBQx9gzq+cRRksIsVzaDlzAr+jx
-# k0a7I6XcZZy4KyUiOFBKAIY1coY8m/yp5NCZQ3FcTa85DVd+xL40wZVP9B9vhWsY
-# 57U3w8R+/T7ioGfk6Z9NJ4FjX2e07OnyCscnrAHSGaJIeO1x+3zj5RmmlQGUfGma
-# uFoukRdpx9Lm/9iuEUyTn0bCBfXob4XrsnE6/wQXpwFIOVBkb0ovzfZfxt88Xr1w
-# UHGdldGqenxeD2mpw4zFg+um9cMULQEvPvwfiZuQUFUJDOnOu8PKNXMruEPbDn6b
-# UZg3bz4RU3oaePaNyAcYikPDLTyXgFCyMIEBag8lmTLnCp2pWaNGd/P7kQ==
+# MRYEFP5qHize2Ds18gLb1VOMHkRQhTdcMA0GCSqGSIb3DQEBAQUABIIBgHxxr9jv
+# 6r+pj8dStG2BL6xCXj2P0lZWsghqwp7OZDJyBrQ4b13Z6AF4zT6GNrcA4jYFTx+C
+# GMrE/2xZFhP1XUr4I6+dx+L4p2hVluD7iBrc5B8M24+qGkxs8weUcqb89KvoVJNl
+# jv2i1XTIDjqMTq6oGCK2XxBfAklwwyas15G6hljgs3XEJ88f5SEGRY70jn5L8PXV
+# 41ijJAaCws6U7FkHR2IoaxhODT7x2YgRPEZ8XpRGqZwKHYLy7cYrFZoTAJP5EBzx
+# 0c2V7qi3Bbf6YreXKm360vetSbq0fNp1O2gz7zoXB2YDsOHdR0U2xQkCQQJQt0Y3
+# arozwU2+k35S/QY2IIMlg57bvxeS4wmyHTXtcp+/ACxlppjSZKHzfxwNx2HVwt3O
+# H0qh5OXDLmnWzh5h9Kh01AlbLBEuJLB9sljVOFqGszGHu58J+UIxz3Dcf+o0cIdu
+# lKJUDO6s0zLpgYIJhPxMcVk6/7CuYs+C3UtTlT4Tgjtb08NWMTffyiG+Mg==
 # SIG # End signature block
