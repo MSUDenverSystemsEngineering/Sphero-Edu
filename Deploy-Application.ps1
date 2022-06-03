@@ -121,7 +121,7 @@ Try {
 		[string]$installPhase = 'Pre-Installation'
 
 		## Show Welcome Message, close Internet Explorer if required, allow up to 3 deferrals, verify there is enough disk space to complete the install, and persist the prompt
-		Show-InstallationWelcome -CloseApps 'AgUIApplication' -CheckDiskSpace -PersistPrompt
+		Show-InstallationWelcome -CloseApps 'SpheroEduWindows' -CheckDiskSpace -PersistPrompt
 
 		## Show Progress Message (with the default message)
 		Show-InstallationProgress
@@ -155,7 +155,7 @@ Try {
 		$exitCode = Add-AppxProvisionedPackage -Online -SkipLicense -PackagePath $dirFiles\Microsoft.WindowsAppRuntime.1.0_3.469.1654.0_x64__8wekyb3d8bbwe.Msix
 		If (($exitCode.ExitCode -ne "0") -and ($mainExitCode -ne "3010")) { $mainExitCode = $exitCode.ExitCode }
 		Write-Log -Message "Installing Sphero EDU..." -Source 'Installation' -LogType 'CMTrace'
-		$exitCode = Add-AppxProvisionedPackage -Online -PackagePath $dirFiles\C7085897.SpheroEdu_6.3.7.0_neutral___yeht7bxwg8ame.Msixbundle -LicensePath $dirFiles\C7085897.SpheroEdu_yeht7bxwg8ame_4e4dc081-d1d2-3f29-376b-bce14be3735a.xml
+		$exitCode = Add-AppxProvisionedPackage -Online -SkipLicense -PackagePath $dirFiles\SpheroEduWindows_6_3_7.msixbundle # -LicensePath $dirFiles\C7085897.SpheroEdu_yeht7bxwg8ame_4e4dc081-d1d2-3f29-376b-bce14be3735a.xml
 		If (($exitCode.ExitCode -ne "0") -and ($mainExitCode -ne "3010")) { $mainExitCode = $exitCode.ExitCode }
 		If ((Test-Path 'HKLM:\SOFTWARE\WOW6432Node\Microsoft\EdgeUpdate\Clients\{F3017226-FE2A-4295-8BDF-00C3A9A7E4C5}') -Or (Test-Path 'HKCU:\Software\Microsoft\EdgeUpdate\Clients\{F3017226-FE2A-4295-8BDF-00C3A9A7E4C5}')) {
 			Write-Log -Message "WebView2 Runtime is already installed." -Source 'Installation' -LogType 'CMTrace'
@@ -183,7 +183,7 @@ Try {
 		[string]$installPhase = 'Pre-Uninstallation'
 
 		## Show Welcome Message, close Internet Explorer with a 60 second countdown before automatically closing
-		Show-InstallationWelcome -CloseApps 'AgUIApplication' -CloseAppsCountdown 60
+		Show-InstallationWelcome -CloseApps 'SpheroEduWindows' -CloseAppsCountdown 60
 
 		## Show Progress Message (with the default message)
 		Show-InstallationProgress
@@ -267,8 +267,8 @@ Catch {
 # SIG # Begin signature block
 # MIIU9wYJKoZIhvcNAQcCoIIU6DCCFOQCAQExCzAJBgUrDgMCGgUAMGkGCisGAQQB
 # gjcCAQSgWzBZMDQGCisGAQQBgjcCAR4wJgIDAQAABBAfzDtgWUsITrck0sYpfvNR
-# AgEAAgEAAgEAAgEAAgEAMCEwCQYFKw4DAhoFAAQUyBurEoKKBMIUxd+zNItCQ0FT
-# smqgghHXMIIFbzCCBFegAwIBAgIQSPyTtGBVlI02p8mKidaUFjANBgkqhkiG9w0B
+# AgEAAgEAAgEAAgEAAgEAMCEwCQYFKw4DAhoFAAQU45fy6Q2ifMr46dqDddISF5+O
+# L62gghHXMIIFbzCCBFegAwIBAgIQSPyTtGBVlI02p8mKidaUFjANBgkqhkiG9w0B
 # AQwFADB7MQswCQYDVQQGEwJHQjEbMBkGA1UECAwSR3JlYXRlciBNYW5jaGVzdGVy
 # MRAwDgYDVQQHDAdTYWxmb3JkMRowGAYDVQQKDBFDb21vZG8gQ0EgTGltaXRlZDEh
 # MB8GA1UEAwwYQUFBIENlcnRpZmljYXRlIFNlcnZpY2VzMB4XDTIxMDUyNTAwMDAw
@@ -368,13 +368,13 @@ Catch {
 # ZSBTaWduaW5nIENBIFIzNgIRAKVN33D73PFMVIK48rFyyjEwCQYFKw4DAhoFAKB4
 # MBgGCisGAQQBgjcCAQwxCjAIoAKAAKECgAAwGQYJKoZIhvcNAQkDMQwGCisGAQQB
 # gjcCAQQwHAYKKwYBBAGCNwIBCzEOMAwGCisGAQQBgjcCARUwIwYJKoZIhvcNAQkE
-# MRYEFP5qHize2Ds18gLb1VOMHkRQhTdcMA0GCSqGSIb3DQEBAQUABIIBgHxxr9jv
-# 6r+pj8dStG2BL6xCXj2P0lZWsghqwp7OZDJyBrQ4b13Z6AF4zT6GNrcA4jYFTx+C
-# GMrE/2xZFhP1XUr4I6+dx+L4p2hVluD7iBrc5B8M24+qGkxs8weUcqb89KvoVJNl
-# jv2i1XTIDjqMTq6oGCK2XxBfAklwwyas15G6hljgs3XEJ88f5SEGRY70jn5L8PXV
-# 41ijJAaCws6U7FkHR2IoaxhODT7x2YgRPEZ8XpRGqZwKHYLy7cYrFZoTAJP5EBzx
-# 0c2V7qi3Bbf6YreXKm360vetSbq0fNp1O2gz7zoXB2YDsOHdR0U2xQkCQQJQt0Y3
-# arozwU2+k35S/QY2IIMlg57bvxeS4wmyHTXtcp+/ACxlppjSZKHzfxwNx2HVwt3O
-# H0qh5OXDLmnWzh5h9Kh01AlbLBEuJLB9sljVOFqGszGHu58J+UIxz3Dcf+o0cIdu
-# lKJUDO6s0zLpgYIJhPxMcVk6/7CuYs+C3UtTlT4Tgjtb08NWMTffyiG+Mg==
+# MRYEFACiRRLI41PEZIlfXONURqBzjiwCMA0GCSqGSIb3DQEBAQUABIIBgDh6bmn+
+# 5/v7anvDSDjUawQFehwhcoPr2oZ/rZnD/0pbOSqk8clYg3PxhkBbqU1xSXgPJeGw
+# bFTjJZGqCl0+8PZRzrpoBBCSSW40iZQdqxNUNK4uDJbYC0zeBA69m7oatQYSGm0h
+# A0C68l+XWX1R4T52Z2GsL6+kW/jIpCKBXl47/l3DwZuyXfKgDuQa9ba9e/cEbWJr
+# lkR7M3S1eepQlH5pfHQRosrT9OI+nonX9XFybQ+0/KDiW2AYc1HAXwrSH/fhwRFs
+# srTa08saOb1R4rwkuG21padMAKHv5+VJQthgaEXt5gshR/qiOealrEzsQWB2+t9B
+# mPzTGDG8GUGAwiScbeZrb+7YiX/EOKc5D73F5Id3MP1q/tL4hyA0gBQgiOl9HvbY
+# BmboMp20LgBurr7aO8dDvXVwOQm3gjMtUqG11uOpsXaXAgg3/FPOAKtjLykNXajo
+# RMY8HsEJBO1t67+MyWlwY3VoU7pdh2JgUFU3aAyzfei2yf+4VkVMVB2t7g==
 # SIG # End signature block
